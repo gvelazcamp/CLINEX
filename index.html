@@ -240,6 +240,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .map-art>span { display:none; }
 .form-panel h2 { margin:0 0 4px;color:#f6d58f;font-size:14px; }
 .form-panel>p { font-size:10.5px;line-height:1.25;color:#eff1f3;margin:0 0 6px; }
+/* Aviso de alcance: solo limpieza, junto al formulario */
+.form-panel .limpieza-aviso {
+  margin:9px 0 11px;
+  padding:10px 12px;
+  border-left:3px solid #e8bd66;
+  border-radius:3px;
+  background:rgba(255,255,255,.08);
+  color:#f7f4eb;
+  font:500 12.5px/1.5 Arial,Helvetica,sans-serif;
+}
+.form-panel .limpieza-aviso strong {
+  display:block;
+  color:#f5d58e;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.15px;
+  margin-bottom:2px;
+}
+
 .form-panel form { display:grid;gap:5px; }
 .form-row { display:grid;grid-template-columns:1fr 1fr;gap:5px; }
 .form-panel input,.form-panel select,.form-panel textarea { min-width:0;width:100%;min-height:24px;padding:4px 7px;border:1px solid #bfc6d2;border-radius:3px;background:#fff;color:#172035;font-size:11px;resize:vertical; }
@@ -589,6 +608,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <button class="btn btn-gold submit-button" type="submit"><svg class="svg-icon" aria-hidden="true"><use href="#ico-whatsapp"/></svg> Enviar mensaje</button>
           <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
         </form>
+        <div class="limpieza-aviso" role="note">
+          <strong>Nos dedicamos exclusivamente a la limpieza de eventos.</strong>
+          No ofrecemos servicios de decoración, ambientación ni organización de eventos.
+        </div>
       </div>
     </div>
   </section>

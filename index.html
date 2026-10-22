@@ -550,11 +550,18 @@ form.addEventListener('submit',e=>{
   }
   const data=new FormData(form);
   const message=[
-    'Hola, CLINEX. Quisiera solicitar un presupuesto.',
-    'Nombre: '+data.get('name'),
-    'Teléfono: '+data.get('phone'),
-    'Servicio: '+data.get('type'),
-    'Detalle: '+data.get('message')
+    '*NUEVA SOLICITUD DE PRESUPUESTO — CLINEX*',
+    '',
+    'Hola, quisiera solicitar un presupuesto para un servicio de limpieza.',
+    '',
+    '*Nombre:* '+String(data.get('name') || '').trim(),
+    '*Teléfono:* '+String(data.get('phone') || '').trim(),
+    '*Tipo de servicio:* '+String(data.get('type') || '').trim(),
+    '',
+    '*Detalles de la solicitud:*',
+    String(data.get('message') || '').trim(),
+    '',
+    'Quedo a la espera de su respuesta. ¡Gracias!'
   ].join('\n');
   const number=CLINEX_CONFIG.whatsappNumber.trim().replace(/\D/g,'');
   const url=number?`https://wa.me/${number}?text=${encodeURIComponent(message)}`:`https://wa.me/?text=${encodeURIComponent(message)}`;
